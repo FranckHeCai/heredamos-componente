@@ -4,7 +4,7 @@ Este proyecto incluye un componente de la prueba técnica de Heredamos para el p
 
 ## Características principales
 
-- **Visualización de pasos:** Muestra el estado de cada fase (actual, pendiente) de forma visual y clara.
+- **Visualización de pasos:** Muestra el estado de cada fase (hecho, actual, pendiente) de forma visual y clara.
 - **Estilizado con Tailwind:** Todos los estilos del componente utilizan clases utilitarias de Tailwind CSS.
 - **Estado global con Zustand:** El estado del paso actual y los estados de cada fase se almacenan y gestionan con Zustand, permitiendo acceso global y persistencia si se requiere.
 

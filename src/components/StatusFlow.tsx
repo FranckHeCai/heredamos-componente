@@ -1,5 +1,6 @@
 import type {Step} from '../types';
 import {useFlowStore} from '../store/store';
+import CheckIcon from '../icons/CheckIcon';
 const StatusFlow = () => {
   const {currentStep, setCurrentStep} = useFlowStore(state => state)
   
@@ -9,7 +10,7 @@ const StatusFlow = () => {
     'Firma de documentos',
     'Revisión de datos'
   ]
-  
+
   return (
     <div className='relative w-full max-w-2xl'>
             <ol className='z-10 relative flex justify-between'>
@@ -21,7 +22,11 @@ const StatusFlow = () => {
                         onClick={() => setCurrentStep(index)}
                         disabled={index > currentStep}
                         className={`size-10 rounded-full flex items-center justify-center bg-amber-800 text-white disabled:bg-gray-300 disabled:text-gray-900 transition-all duration-300`}>
-                        {index + 1}
+                        { currentStep > index
+                          ? <CheckIcon />
+                          : index + 1
+
+                        }
                       </button>
                       {step}
                     </li>
