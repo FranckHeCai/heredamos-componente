@@ -7,6 +7,7 @@ export const useFlowStore = create<FlowStore>()(persist((set) => ({
   setCurrentStep: (currentStep) => set({currentStep}),
 }),
  {
+  // Partialize para guardar el estado en el localStorage
         name: 'Flow Store', 
         partialize: (state) => ({ 
           currentStep: state.currentStep

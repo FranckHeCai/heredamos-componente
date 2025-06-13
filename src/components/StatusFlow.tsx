@@ -13,6 +13,7 @@ const StatusFlow = () => {
 
   return (
     <div className='relative w-full max-w-2xl'>
+            {/* Fases */}
             <ol className='z-10 relative flex justify-between'>
               {
                 steps.map((step, index)=> {
@@ -34,6 +35,7 @@ const StatusFlow = () => {
                 })
               }
             </ol>
+            {/* Barra de progeso */}
             <div className="z-0 absolute left-1/2 top-4 -translate-x-1/2 w-full max-w-lg h-2 bg-gray-300 rounded overflow-hidden">
               <div
                 className="h-full bg-amber-800 transition-all duration-300"
