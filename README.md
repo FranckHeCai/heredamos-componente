@@ -1,6 +1,6 @@
 # Descripción
 
-Este proyecto incluye un componente para la prueba técnica de Heredados como Becario de desarrollo web. El componente está construido con React, estilizado completamente con Tailwind CSS y utiliza Zustand para el manejo global del estado de los pasos.
+Este proyecto incluye un componente de la prueba técnica de Heredamos para el puesto de Becario de desarrollo web. El componente está construido con React, estilizado con Tailwind CSS y utiliza Zustand para el manejo global del estado de los pasos.
 
 ## Características principales
 

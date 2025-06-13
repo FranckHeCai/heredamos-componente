@@ -1,4 +1,3 @@
-import type { Step } from './types';
 import { useFlowStore } from './store/store';
 import StatusFlow from './components/StatusFlow';
 
