@@ -1,54 +1,33 @@
-# React + TypeScript + Vite
+# Descripción
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto incluye un componente para la prueba técnica de Heredados como Becario de desarrollo web. El componente está construido con React, estilizado completamente con Tailwind CSS y utiliza Zustand para el manejo global del estado de los pasos.
 
-Currently, two official plugins are available:
+## Características principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Visualización de pasos:** Muestra el estado de cada fase (actual, pendiente) de forma visual y clara.
+- **Estilizado con Tailwind:** Todos los estilos del componente utilizan clases utilitarias de Tailwind CSS.
+- **Estado global con Zustand:** El estado del paso actual y los estados de cada fase se almacenan y gestionan con Zustand, permitiendo acceso global y persistencia si se requiere.
 
-## Expanding the ESLint configuration
+## Ejemplo de uso
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```tsx
+import StepFlow from "./components/StepFlow";
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+function App() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-amber-50">
+      <StepFlow />
+    </div>
+  );
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Instalación de dependencias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Se utilizan los paquetes de Tailwind CSS y Zustand por lo tanto habrá que instalarlos:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+---
